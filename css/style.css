@@ -1,0 +1,1044 @@
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+body::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+body::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #999999; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    font: normal 100%/1.3 "pretendard";
+    color: inherit;
+
+
+}
+html,body{
+    scroll-behavior: smooth;
+}
+.container{
+   width: 100%;
+    
+ 
+    margin: 0 auto;
+}
+header{
+    position: relative;
+    
+    top: 0;
+    width: 100%;
+    height: 800px;
+    background: url(../img/header/bg.png) no-repeat 0 0;
+    background-position: 50%;
+    
+    
+}
+.navlist{
+   width: 100%;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 75px;
+    background: rgba(0,0,0,.4);
+    
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    overflow: hidden;
+}
+
+
+.navlist  li{
+    margin-top: 25px;
+}
+.navlist > li{
+    float: left;
+    padding-left: 20px;
+}
+.navlist  li  a{
+    
+    
+    display: block;
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+}
+.navlist  li  a:hover{
+   opacity: .5;
+}
+header .logo{
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+header p{
+    display: flex;
+    color: white;
+    font-size: 60px;
+    font-family: ;
+    justify-content: center;
+    margin-top: 50px;
+    animation: fadein 3s ;
+
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.mbox1{
+    position: relative;
+    background: black;
+    width: 100%;
+    padding: 50px 0;
+}
+.mbox1 .subbox{
+    display: flex;
+    justify-content: center;
+}
+.mbox1 .titp{
+   
+    color: white;
+    font-size: 36px;
+    font-weight: 200;
+   
+}
+.mbox1 .pset{
+margin-top: 70px;
+}
+.mbox1 .pset p{
+
+    font-size: 18px;
+    color: #fff;
+    padding-top: 10px;
+
+ }
+ .mbox1 .introimg{
+    position: relative;
+    background: url(../img/mbox1/intro.png) no-repeat 0 0;
+    background-size: cover;
+    width: 300px;
+    height: 381px;
+    
+    
+ }
+ .mbox1 .introimg .pset{
+     position: absolute;
+     top: -70px;
+     left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    opacity: 0;
+ }
+ .mbox1 .introimg .pset p{
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    line-height: 381px;
+    z-index: 200;
+    opacity: 0;
+    color: white;
+ }
+
+ .mbox1 .introimg::after{
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    opacity: 0;
+    display: none;
+ }
+ .mbox1 .introimg:hover::after {
+    opacity: 1;
+    transition: all 1s;
+    display: none;
+ }
+ .mbox1 .introimg:hover .pset{
+    opacity: 1;
+    transition: all 1s;
+ }
+ .mbox1 .introimg:hover .pset p{
+    opacity: 1;
+    transition: all 1s;
+ }
+
+ 
+ .mbox2{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url(../img/space.png) no-repeat 0 0;
+    display: flex;
+    -webkit-animation:animate_background 10s linear;
+    animation:animate_background 10s linear;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  
+  
+ }
+ @-webkit-keyframes animate_background{
+    0%   {background-position:0% 0%}
+    50%  {background-position:50% 100%;}
+    100%  {background-position:0% 0%;}		  
+   }
+   @keyframes animate_background{
+    0%   {background-position:0% 0%}
+    50%  {background-position:50% 100%;}
+    100%  {background-position:0% 0%;}		  
+   }
+
+   
+   
+ .mbox2 .tit{
+    width: 30%;
+    color: #fff;
+    font-size: 48px;
+    padding-left: 150px;
+    padding-top: 230px;
+    background-color: black;
+    background: linear-gradient(to right,black,transparent 150%);
+ }
+ .mbox2 .subboxset{
+    display: flex;
+    width: 70%;
+ }
+ .mbox2 .subboxset .subbox1{
+    width: 33.33%;
+    height: 500px;
+    overflow: hidden;
+
+    position: relative;
+    background-color: rgba(86,36,90,.1);
+    
+   
+ }
+
+ .mbox2 .subboxset .subbox1:hover > p{
+    transform: scale( 1.1 );
+    transition: all 1.5s;
+ }
+ .mbox2 .subboxset .subbox2:hover > p{
+    transform: scale( 1.1 );
+    transition: all 1.5s;
+ }
+ .mbox2 .subboxset .subbox3:hover > p{
+    transform: scale( 1.1 );
+    transition: all 1.5s;
+ }
+ .mbox2 .subboxset .subbox1 .p1{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    writing-mode: vertical-lr;
+    padding-left: 50px;
+    padding-top: 30px;
+ }
+ .mbox2 .subboxset .subbox1 .p2{
+    display: block;
+    color: #fff;
+    font-size: 36px;
+    padding-top: 130px;
+    padding-left: 150px;
+
+ }
+ .mbox2 .subboxset .subbox1 img{
+    position: absolute;
+    top: 10px;
+    right: -24px;
+ }
+ .mbox2 .subboxset .subbox2{
+    width: 33.33%;
+    height: 500px;
+    background-color: rgba(225,221,221,.3);
+    overflow: hidden;
+    position: relative;
+ 
+ }
+ .mbox2 .subboxset .subbox2 .p1{
+    display: block;
+    font-size: 36px;
+    color: #fff;
+    padding-top: 50px;
+    padding-left: 30px;
+ }
+ .mbox2 .subboxset .subbox2 .p2{
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    padding-top: 30px;
+    padding-left: 30px;
+ }
+ .mbox2 .subboxset .subbox2 img{
+    position: absolute;
+    top: 250px;
+    left: 0;
+ }
+ .mbox2 .subboxset .subbox3{
+    width: 33.33%;
+    height: 500px;
+    background-color: rgba(50,105,246,.3);
+   
+ }
+ .mbox2 .subboxset .subbox3 .p1{
+    display: flex;
+    color: #fff;
+    font-size: 20px;
+    justify-content: center;
+    padding-top: 310px;
+ }
+ .mbox2 .subboxset .subbox3 .p2{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 36px;
+    padding-top: 10px;
+ }
+ .mbox2 .subboxset .subbox3 img{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    
+ }
+.mbox3{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+   
+}
+.mbox3 .infowrap1{
+    position: fixed;
+    background-color: rgba(0,0,0,.8);
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow-y: scroll;
+    padding: 30px;
+    
+}
+.mbox3 .infowrap1::-webkit-scrollbar-thumb{
+    height: 30%; /* 스크롤바의 길이 */
+    background: #999999; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+.mbox3 .infowrap1 .subinfo{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    z-index: 200;
+    width: 75%;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+.mbox3 .infowrap1 .subinfo img{
+    margin-left: .5%;
+    width: 100%;
+}
+.mbox3 .infowrap2{
+    position: fixed;
+    background-color: rgba(0,0,0,.8);
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow-y: scroll;
+    padding: 30px;
+    
+}
+.mbox3 .infowrap2::-webkit-scrollbar-thumb{
+    height: 30%; /* 스크롤바의 길이 */
+    background: #999999; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+.mbox3 .infowrap2 .subinfo{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    z-index: 200;
+    width: 75%;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+.mbox3 .infowrap2 .subinfo img{
+    margin-left: .5%;
+    width: 100%;
+}
+.mbox3 .infowrap3{
+    position: fixed;
+    background-color: rgba(0,0,0,.8);
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow-y: scroll;
+    padding: 30px;
+    
+}
+.mbox3 .infowrap3::-webkit-scrollbar-thumb{
+    height: 30%; /* 스크롤바의 길이 */
+    background: #999999; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+.mbox3 .infowrap3 .subinfo{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    z-index: 200;
+    width: 75%;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+.mbox3 .infowrap3 .subinfo img{
+    margin-left: .5%;
+    width: 100%;
+}
+.mbox3 .infowrap4{
+    position: fixed;
+    background-color: rgba(0,0,0,.8);
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow-y: scroll;
+    padding: 30px;
+    
+}
+.mbox3 .infowrap4::-webkit-scrollbar-thumb{
+    height: 30%; /* 스크롤바의 길이 */
+    background: #999999; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+.mbox3 .infowrap4 .subinfo{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    z-index: 200;
+    width: 75%;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+.mbox3 .infowrap4 .subinfo img{
+    margin-left: .5%;
+    width: 100%;
+}
+.mbox3 .arrowset p{}
+.mbox3 .arrowset img{}
+.mbox3 .tit{
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    color: #333;
+    font-weight: 200;
+    padding-top: 100px;
+}
+.mbox3 .infoset{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 94px;
+}
+.mbox3 .infoset > div{
+    float: left;
+}
+.mbox3 .infobox{
+    
+}
+.mbox3 .infobox1{
+    width: 25%;
+    height: 760px;
+    border-right: 1px solid #e7d5d5;
+    overflow: hidden;
+    position: relative;
+}
+
+.mbox3 .infobox1:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:100%;
+    left:0;
+    background-image: linear-gradient(transparent,#e2d7f9,#e2f9fc);
+    background-size:30000px auto;
+    transition: all 1s;
+    
+
+}
+.mbox3 .infobox1:hover{
+    transform: scale( 1.02 );
+    transition: all 1s;
+    border-right: none;
+}
+.mbox3 .infobox2:hover{
+    transform: scale( 1.02 );
+    transition: all 1s;
+    border-right: none;
+}
+.mbox3 .infobox3:hover{
+    transform: scale( 1.02 );
+    transition: all 1s;
+    border-right: none;
+}
+.mbox3 .infobox4:hover{
+    transform: scale( 1.02 );
+    transition: all 1s;
+}
+
+.mbox3 .infobox1:hover > p{
+    color: #d3b6e4;
+    transition: all 2s;
+}
+.mbox3 .infobox2:hover > p{
+    color: #fff;
+    transition: all 2s;
+}
+.mbox3 .infobox3:hover > p{
+    color: #f2eaea;
+    transition: all 2s;
+}
+.mbox3 .infobox4:hover > p{
+    color: #ab7679;
+    transition: all 2s;
+}
+.mbox3 .infobox1:hover:after{
+    
+    top:0
+    
+
+}
+
+.mbox3 .infobox1 p{
+    z-index: 2;
+    position: relative;
+}
+.mbox3 .infobox1 a{
+    z-index: 10;
+    position: absolute;
+    bottom: 20px;
+    padding-left: 25px;
+}
+.mbox3 .infobox1 .p{
+    color: #333;
+}
+.mbox3 .infobox1 .p1{
+    display: flex;
+    color: #333;
+    font-size: 18px;
+    justify-content: center;
+    padding-top: 70px;
+}
+.mbox3 .infobox1 .p2{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    padding-top: 50px;
+}
+.mbox3 .infobox1 .p3{
+    display: flex;
+    justify-content: center;
+    font-size: 72px;
+    color: #333;
+    padding-top: 90px;
+}
+.mbox3 .infobox1 .p4{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    
+ }
+ .mbox3 .infobox1 .p4 a{
+     width: 100px;
+     font-size: 22px;
+     border-radius: 30px;
+     display: block;
+     border: 1px solid #e7d5d5;
+     padding: 10px 13px;
+     
+ }
+ .mbox3 .infobox1 .p4:hover a{
+     transition: all .1s;
+     color: #333;
+     border: 1px solid #333;
+ 
+ 
+ }
+.mbox3 .infobox1 .p5{
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 70px;
+   display: flex;
+   justify-content: center;
+   
+}
+.mbox3 .infobox1 .p5 a{
+    width: 100px;
+    font-size: 22px;
+    border-radius: 30px;
+    display: block;
+    border: 1px solid #e7d5d5;
+    padding: 10px 23px;
+    
+}
+.mbox3 .infobox1 .p5:hover a{
+    transition: all .1s;
+    color: #333;
+    border: 1px solid #333;
+
+
+}
+.mbox3 .infobox1 .mimg {
+
+    position: absolute;
+    z-index: 100;
+    bottom: 20px;
+    left: 6%;
+}
+.mbox3 .infobox2 .mimg {
+
+    position: absolute;
+    z-index: 100;
+    bottom: 20px;
+    left: 6%;
+}
+.mbox3 .infobox3 .mimg {
+
+    position: absolute;
+    z-index: 100;
+    bottom: 20px;
+    left: 6%;
+}
+.mbox3 .infobox4 .mimg {
+
+    position: absolute;
+    z-index: 100;
+    bottom: 20px;
+    left: 6%;
+}
+.mbox3 .infobox2 .p5{
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 70px;
+   display: flex;
+   justify-content: center;
+   
+}
+.mbox3 .infobox2 .p5 a{
+    width: 100px;
+    font-size: 22px;
+    border-radius: 30px;
+    display: block;
+    border: 1px solid #e7d5d5;
+    padding: 10px 23px;
+    
+}
+.mbox3 .infobox2 .p5:hover a{
+    transition: all .1s;
+    color: #333;
+    border: 1px solid #333;
+
+
+}
+.mbox3 .infobox3 .p5{
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 70px;
+   display: flex;
+   justify-content: center;
+   
+}
+.mbox3 .infobox3 .p5 a{
+    width: 100px;
+    font-size: 22px;
+    border-radius: 30px;
+    display: block;
+    border: 1px solid #e7d5d5;
+    padding: 10px 23px;
+    
+}
+.mbox3 .infobox3 .p5:hover a{
+    transition: all .1s;
+    color: #333;
+    border: 1px solid #333;
+
+
+}
+.mbox3 .infobox4 .p5{
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 70px;
+   display: flex;
+   justify-content: center;
+   
+}
+.mbox3 .infobox4 .p5 a{
+    width: 100px;
+    font-size: 22px;
+    border-radius: 30px;
+    display: block;
+    border: 1px solid #e7d5d5;
+    padding: 10px 23px;
+    
+}
+.mbox3 .infobox4 .p5:hover a{
+    transition: all .1s;
+    color: #333;
+    border: 1px solid #333;
+
+
+}
+
+.mbox3 .infobox2 .p4{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    
+ }
+ .mbox3 .infobox2 .p4 a{
+     width: 100px;
+     font-size: 22px;
+     border-radius: 30px;
+     display: block;
+     border: 1px solid #e7d5d5;
+     padding: 10px 13px;
+     
+ }
+ .mbox3 .infobox2 .p4:hover a{
+     transition: all .1s;
+     color: #333;
+     border: 1px solid #333;
+ 
+ 
+ }
+ .mbox3 .infobox3 .p4{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    
+ }
+ .mbox3 .infobox3 .p4 a{
+     width: 100px;
+     font-size: 22px;
+     border-radius: 30px;
+     display: block;
+     border: 1px solid #e7d5d5;
+     padding: 10px 13px;
+     
+ }
+ .mbox3 .infobox3 .p4:hover a{
+     transition: all .1s;
+     color: #333;
+     border: 1px solid #333;
+ 
+ 
+ }
+ .mbox3 .infobox4 .p4{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    
+ }
+ .mbox3 .infobox4 .p4 a{
+     width: 100px;
+     font-size: 22px;
+     border-radius: 30px;
+     display: block;
+     border: 1px solid #e7d5d5;
+     padding: 10px 13px;
+     
+ }
+ .mbox3 .infobox4 .p4:hover a{
+     transition: all .1s;
+     color: #333;
+     border: 1px solid #333;
+ 
+ 
+ }
+.mbox3 .infobox1 .subinfo p{}
+.mbox3 .infobox1 a img{
+ position: relative;
+ left: 12%;
+}
+.mbox3 .infobox2 a img{
+ position: relative;
+ left: 12%;
+}
+.mbox3 .infobox3 a img{
+ position: relative;
+ left: 12%;
+}
+.mbox3 .infobox4 a img{
+ position: relative;
+ left: 12%;
+}
+
+.mbox3 .infobox2{
+    width: 25%;
+    height: 760px;
+    border-right: 1px solid #e7d5d5;
+    overflow: hidden;
+    position: relative;
+ 
+}
+
+.mbox3 .infobox2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#caf4fb,#fafdfd);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-size: 30000px auto;
+    transition: all 1s;
+
+}
+.mbox3 .infobox2:hover::after{
+    top: 0;
+}
+.mbox3 .infobox2 .p{
+    color: #333;
+}
+.mbox3 .infobox2 .p1{
+    display: flex;
+    color: #333;
+    font-size: 18px;
+    justify-content: center;
+    padding-top: 70px;
+}
+.mbox3 .infobox2 .p2{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    padding-top: 50px;
+}
+.mbox3 .infobox2 .p3{
+    display: flex;
+    justify-content: center;
+    font-size: 72px;
+    color: #;
+    padding-top: 90px;
+}
+.mbox3 .infobox2 p{
+    position: relative;
+    z-index: 10;
+}
+.mbox3 .infobox2 a{
+    z-index: 10;
+    position: absolute;
+    bottom: 20px;
+    padding-left: 25px;
+}
+.mbox3 .infobox3{
+    width: 25%;
+    height: 760px;
+    overflow: hidden;
+    position: relative;
+    border-right: 1px solid #e7d5d5;
+  
+}
+.mbox3 .infobox3::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#fffffe,#f6fae9);
+transition: all 1s;
+top: 100%;
+left: 0;
+background-size:  auto;
+
+}
+.mbox3 .infobox3:hover::after{
+    top: 0;
+}
+
+
+.mbox3 .infobox3 a{
+    position: absolute;
+    bottom: 20px;
+    padding-left: 25px;
+    z-index: 10;
+}
+.mbox3 .infobox3 p{
+    position: relative;
+    z-index: 10;
+    color: #333;
+}
+
+.mbox3 .infobox3 .p1{
+    display: flex;
+    color: ;
+    font-size: 18px;
+    justify-content: center;
+    padding-top: 70px;
+}
+.mbox3 .infobox3 .p2{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    padding-top: 50px;
+}
+.mbox3 .infobox3 .p3{
+    display: flex;
+    justify-content: center;
+    font-size: 72px;
+    color: #333;
+    padding-top: 90px;
+}
+.mbox3 .infobox4{
+    width: 25%;
+    height: 760px;
+    overflow: hidden;
+    position: relative;
+  
+}
+.mbox3 .infobox4::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#fffffe,#c98b8e);
+transition: all 1s;
+top: 100%;
+left: 0;
+background-size:  auto;
+
+}
+.mbox3 .infobox4:hover::after{
+    top: 0;
+}
+
+
+.mbox3 .infobox4 a{
+    position: absolute;
+    bottom: 20px;
+    padding-left: 25px;
+    z-index: 10;
+}
+.mbox3 .infobox4 p{
+    position: relative;
+    z-index: 10;
+    color: #333;
+}
+
+.mbox3 .infobox4 .p1{
+    display: flex;
+    color: ;
+    font-size: 18px;
+    justify-content: center;
+    padding-top: 70px;
+}
+.mbox3 .infobox4 .p2{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    padding-top: 50px;
+}
+.mbox3 .infobox4 .tst{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    padding-top: 30px;
+}
+.mbox3 .infobox4 .p3{
+    display: flex;
+    justify-content: center;
+    font-size: 72px;
+    color: #333;
+    padding-top: 40px;
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: black;
+}
+footer .p1{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 200;
+    padding-top: 100px;
+}
+footer .p2{
+    display: flex;
+    justify-content: center;
+    
+    color: #fff;
+    font-size: 24px;
+    padding-top: 70px;
+}
+footer .logo{
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    
+}
+footer .logo img{}
